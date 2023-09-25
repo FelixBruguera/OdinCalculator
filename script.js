@@ -22,6 +22,7 @@ function operate(firstNum,lastNum,oper) {
 const divNumbers = document.querySelector("#number");
 const divOperators = document.querySelector("#operator");
 const display = document.querySelector("#display");
+const digits = document.querySelector("#digits");
 const body = document.querySelector("body");
 const upper = ["C","Del","."];
 
@@ -53,7 +54,7 @@ for (op in OPERATORS) {
 function displayNumbers () {
     calculator.addEventListener("click",(e) => {
         let text = e.target.textContent;
-        if (e.target == display || e.target == calculator || e.target == divNumbers || e.target == divOperators) {text = ""};
+        if (e.target == display || e.target == calculator || e.target == divNumbers || e.target == divOperators || e.target == digits) {text = ""};
         if (e.target.textContent == "Del") {firstNumbers = firstNumbers.slice(0,-1), text = ""};
         if (e.target.textContent == "=") {text = ""};
         firstNumbers += text;
