@@ -118,8 +118,8 @@ body.addEventListener("keydown", (e) => {
     firstNumbers += text;
     if (text == "Delete") {firstNumbers = ""}
     display.style.fontSize = "50px"
-    if (firstNumbers.length > 17 && firstNumbers.length < 25) {display.style.fontSize = "35px"}
-    if (firstNumbers.length > 24 && firstNumbers.length < 35) {display.style.fontSize = "25px"}
-    if (firstNumbers.length > 34) {display.style.fontSize = "15px"}
+    if (firstNumbers.length > 14 && firstNumbers.length < 20) {display.style.fontSize = "35px"}
+    if (firstNumbers.length > 19 && firstNumbers.length < 30) {display.style.fontSize = "25px"}
+    if (firstNumbers.length > 29) {display.style.fontSize = "15px"}
     display.textContent = firstNumbers;
 })
