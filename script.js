@@ -53,7 +53,7 @@ for (op in OPERATORS) {
 function displayNumbers () {
     calculator.addEventListener("click",(e) => {
         let text = e.target.textContent;
-        if (e.target == display || e.target == calculator) {text = ""};
+        if (e.target == display || e.target == calculator || e.target == divNumbers || e.target == divOperators) {text = ""};
         if (e.target.textContent == "Del") {firstNumbers = firstNumbers.slice(0,-1), text = ""};
         if (e.target.textContent == "=") {text = ""};
         firstNumbers += text;
@@ -62,6 +62,8 @@ function displayNumbers () {
         if (firstNumbers.length > 14 && firstNumbers.length < 20) {display.style.fontSize = "35px"}
         if (firstNumbers.length > 19 && firstNumbers.length < 30) {display.style.fontSize = "25px"}
         if (firstNumbers.length > 29) {display.style.fontSize = "15px"}
+        console.log(text);
+        console.log(e);
         display.textContent = firstNumbers;
     });
 }
