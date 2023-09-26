@@ -63,8 +63,6 @@ function displayNumbers () {
         if (firstNumbers.length > 14 && firstNumbers.length < 20) {display.style.fontSize = "35px"}
         if (firstNumbers.length > 19 && firstNumbers.length < 30) {display.style.fontSize = "25px"}
         if (firstNumbers.length > 29) {display.style.fontSize = "15px"}
-        console.log(text);
-        console.log(e);
         display.textContent = firstNumbers;
     });
 }
